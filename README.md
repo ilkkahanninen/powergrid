@@ -6,6 +6,8 @@ It uses the same naming convention as Bootstrap grid system except names without
 
 ## Compiling
 
+```
 npm install gulp -g
 npm install
 gulp
+```
