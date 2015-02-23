@@ -1,0 +1,82 @@
+// +----------------------------------------------------+
+// | CALCULATE THINGS                                   |
+// +----------------------------------------------------+
+
+columnWidth = (100%/columns)
+heightHack = 9999px
+precision = 3
+
+// +----------------------------------------------------+
+// | CONTAINERS                                         |
+// +----------------------------------------------------+
+
+.container
+  clearfix()
+  max-width container-width
+  margin-left auto
+  margin-right auto
+
+.row
+  clearfix()
+  &.equal
+    overflow hidden
+    width 100%
+
+// +----------------------------------------------------+
+// | COLUMNS                                            |
+// +----------------------------------------------------+
+
+create-columns(size)
+  cols = ''
+  for i in (1..columns)
+    cols = cols + '.col-' + size + '-' + i + ','
+    .col-{size}-{i}
+      width round(columnWidth*i, precision)
+    .col-{size}-offset-{i}
+      margin-left round(columnWidth*i, precision)
+    .col-{size}-push-{i}
+      left round(columnWidth*i, precision)
+    .col-{size}-pull-{i}
+      right round(columnWidth*i, precision)
+  {cols}
+    float left
+
+no-gutter()
+  padding 0!important
+  .row.equal &
+      padding-bottom heightHack!important
+      margin-bottom (-heightHack)!important
+
+allCols = ''
+for size in xs sm md lg
+  for i in (1..columns)
+    allCols = allCols + '.col-' + size + '-' + i + ','
+{allCols}
+  position relative
+  box-sizing border-box
+  padding gutter
+  content foo
+
+.row.equal
+  {allColClasses}
+    padding-bottom heightHack!important
+    margin-bottom (-1 * heightHack + gutter)
+
+create-columns('xs')
+.no-gutter, .no-gutter-xs
+  no-gutter()
+
+@media screen and (min-width: threshold-sm)
+  create-columns('sm')
+  .no-gutter-sm
+    no-gutter()
+  
+@media screen and (min-width: threshold-md)
+  create-columns('md')
+  .no-gutter-md
+    no-gutter()
+
+@media screen and (min-width: threshold-lg)
+  create-columns('lg')
+  .no-gutter-lg
+    no-gutter()
