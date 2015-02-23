@@ -1,0 +1,27 @@
+{
+  "name": "powergrid",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ilkkahanninen/powergrid",
+  "authors": [
+    "Ilkka Hänninen <ilkka.hanninen@gmail.com>"
+  ],
+  "description": "Flexible and responsive CSS grid system based on Stylus",
+  "main": "css/powergrid.css",
+  "keywords": [
+    "css",
+    "grid",
+    "stylus",
+    "responsive",
+    "push",
+    "pull",
+    "offset"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
