@@ -2,9 +2,20 @@
 // | CALCULATE THINGS                                   |
 // +----------------------------------------------------+
 
-columnWidth = (100%/columns)
-heightHack = 9999px
-precision = 3
+pg_column_width = (100%/pg_columns)
+_height_hack = 9999px
+_precision = 3
+
+pg_col_list = null
+for size, threshold in pg_thresholds
+  for i in (1..pg_columns)
+    _x = '.col-' + size + '-' + i
+    if pg_col_list == null
+      pg_col_list = _x
+    else
+      push(pg_col_list, _x)
+
+pg_col_class = join(',', pg_col_list)
 
 // +----------------------------------------------------+
 // | CONTAINERS                                         |
@@ -12,7 +23,7 @@ precision = 3
 
 .container
   clearfix()
-  max-width container-width
+  max-width pg_container_width
   margin-left auto
   margin-right auto
 
@@ -28,55 +39,48 @@ precision = 3
 
 create-columns(size)
   cols = ''
-  for i in (1..columns)
+  for i in (1..pg_columns)
     cols = cols + '.col-' + size + '-' + i + ','
     .col-{size}-{i}
-      width round(columnWidth*i, precision)
+      width round(pg_column_width*i, _precision)
     .col-{size}-offset-{i}
-      margin-left round(columnWidth*i, precision)
+      margin-left round(pg_column_width*i, _precision)
     .col-{size}-push-{i}
-      left round(columnWidth*i, precision)
+      left round(pg_column_width*i, _precision)
     .col-{size}-pull-{i}
-      right round(columnWidth*i, precision)
+      right round(pg_column_width*i, _precision)
   {cols}
     float left
 
 no-gutter()
   padding 0!important
   .row.equal &
-      padding-bottom heightHack!important
-      margin-bottom (-heightHack)!important
+      padding-bottom _height_hack!important
+      margin-bottom (-_height_hack)!important
 
-allCols = ''
-for size in xs sm md lg
-  for i in (1..columns)
-    allCols = allCols + '.col-' + size + '-' + i + ','
-{allCols}
+// Mobile first
+{pg_col_class}
   position relative
   box-sizing border-box
-  padding gutter
+  padding pg_gutter
   content foo
 
+// Equal height divs
+
 .row.equal
-  {allColClasses}
-    padding-bottom heightHack!important
-    margin-bottom (-1 * heightHack + gutter)
+  {pg_col_class}
+    padding-bottom _height_hack!important
+    margin-bottom (-1 * _height_hack + pg_gutter)
 
 create-columns('xs')
 .no-gutter, .no-gutter-xs
   no-gutter()
 
-@media screen and (min-width: threshold-sm)
-  create-columns('sm')
-  .no-gutter-sm
-    no-gutter()
-  
-@media screen and (min-width: threshold-md)
-  create-columns('md')
-  .no-gutter-md
-    no-gutter()
+// Responsive layouts
 
-@media screen and (min-width: threshold-lg)
-  create-columns('lg')
-  .no-gutter-lg
-    no-gutter()
+for name, threshold in pg_thresholds
+  if threshold > 0
+    @media screen and (min-width: threshold)
+      create-columns(name)
+      .no-gutter-{name}
+        no-gutter()
