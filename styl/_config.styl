@@ -1,10 +1,26 @@
-pg_container_width = 1200px
-pg_columns = 12
-pg_gutter = 15px
+// Maximum container width
+if pg_container_width == 'pg_container_width'
+  pg_container_width = 1200px
 
-pg_thresholds = {
-  xs: 0,
-  sm: 768px,
-  md: 992px,
-  lg: 1200px
-}
+// Number of columns in grid
+if pg_columns == 'pg_columns'
+  pg_columns = 12
+
+// Column gutter in pixels
+if pg_gutter == 'pg_gutter'
+  pg_gutter = 15px
+
+// List of thresholds for responsive layouts.
+// Keys are mapped like this: .col-{key}-4
+// Values are used as min-width limits for media queries.
+if pg_thresholds == 'pg_thresholds'
+  pg_thresholds = {
+    xs: 0,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+  }
+
+// Do global CSS reset if true
+if pg_reset == 'pg_reset'
+  pg_reset = true
