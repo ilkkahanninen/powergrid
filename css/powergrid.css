@@ -286,7 +286,7 @@
 .row.equal .no-gutter,
 .row.equal .no-gutter-xs {
   padding-bottom: 9999px !important;
-  margin-bottom: -_height_hack !important;
+  margin-bottom: -9999px !important;
 }
 @media screen and (min-width: 768px) {
   .col-sm-1 {
@@ -452,7 +452,7 @@
   }
   .row.equal .no-gutter-sm {
     padding-bottom: 9999px !important;
-    margin-bottom: -_height_hack !important;
+    margin-bottom: -9999px !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -619,7 +619,7 @@
   }
   .row.equal .no-gutter-md {
     padding-bottom: 9999px !important;
-    margin-bottom: -_height_hack !important;
+    margin-bottom: -9999px !important;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -786,7 +786,7 @@
   }
   .row.equal .no-gutter-lg {
     padding-bottom: 9999px !important;
-    margin-bottom: -_height_hack !important;
+    margin-bottom: -9999px !important;
   }
 }
 html,
