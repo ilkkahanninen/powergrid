@@ -1,0 +1,23 @@
+html, body
+  height 100%
+
+pg_cover_img(src)
+  if src != null
+    background-image url(src)
+  background-position center
+  background-size 100% auto
+  background-size cover
+
+.cover
+  pg_cover_img(null)
+  text-align center
+  &.full-height  
+    display table
+    width 100%
+    min-height 100%
+    .content
+      width 100%
+      height 100%
+      display table-cell
+      text-align center
+      vertical-align middle

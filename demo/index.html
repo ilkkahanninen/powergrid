@@ -2,11 +2,70 @@
 <html>
   <head>
     <title>Powergrid demo</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/powergrid.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="cover full-height" style="background-image: url('https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=75&fm=jpg&s=127f3a3ccf4356b7f79594e05f6c840e')">
+      <div class="content">
+        <h1>Powergrid</h1>
+        <hr>
+        <p>Tiny CSS layout library with only essential features</p>
+      </div>
+    </div>
     <div class="container">
+      
+      <h2>Responsive grid</h2>
+      
+      <div class="row">
+        <div class="col-sm-12"><div class="content">.col-sm-12</div></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6"><div class="content">.col-sm-6</div></div>
+        <div class="col-sm-6"><div class="content">.col-sm-6</div></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"><div class="content">.col-sm-4</div></div>
+        <div class="col-sm-4"><div class="content">.col-sm-4</div></div>
+        <div class="col-sm-4"><div class="content">.col-sm-4</div></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3"><div class="content">.col-sm-3</div></div>
+        <div class="col-sm-3"><div class="content">.col-sm-3</div></div>
+        <div class="col-sm-3"><div class="content">.col-sm-3</div></div>
+        <div class="col-sm-3"><div class="content">.col-sm-3</div></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><div class="content">.col-sm-2</div></div>
+        <div class="col-sm-2"><div class="content">.col-sm-2</div></div>
+        <div class="col-sm-2"><div class="content">.col-sm-2</div></div>
+        <div class="col-sm-2"><div class="content">.col-sm-2</div></div>
+        <div class="col-sm-2"><div class="content">.col-sm-2</div></div>
+        <div class="col-sm-2"><div class="content">.col-sm-2</div></div>
+      </div>
+      
+      <h2>Grid offsets</h2>
+      
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-2"><div class="content">Hello</div></div>
+        <div class="col-sm-4"><div class="content">World</div></div>
+      </div>
+      
+      <h2>Content ordering</h2>
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-push-4">
+          <div class="important content">This is more important content. On mobile phone this comes first.</div>
+        </div>          
+        <div class="col-sm-4 col-sm-pull-8">
+          <div class="content">This follows.</div>
+        </div>
+      </div>
+      
+      
+      <h2>Grid cells with equal heights</h2>
+      
       <div class="row equal">
         <div class="col-sm-6">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit. Sed augue orci, lacinia eu tincidunt et eleifend nec lacus. Donec ultricies nisl ut felis, suspendisse potenti. Lorem ipsum ligula ut hendrerit mollis, ipsum erat vehicula risus, eu suscipit sem libero nec erat. Aliquam erat volutpat. Sed congue augue vitae neque. Nulla consectetuer porttitor pede. Fusce purus morbi tortor magna condimentum vel, placerat id blandit sit amet tortor.
@@ -15,14 +74,9 @@
           Mauris sed libero. Suspendisse facilisis nulla in lacinia laoreet, lorem velit accumsan velit vel mattis libero nisl et sem. Proin interdum maecenas massa turpis sagittis in, interdum non lobortis vitae massa. Quisque purus lectus, posuere eget imperdiet nec sodales id arcu. Vestibulum elit pede dictum eu, viverra non tincidunt eu ligula.
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">col-sm-4 col-sm-offset-4</div>
-        <div class="col-sm-4">col-sm-4</div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8 col-sm-push-4">col-sm-9 col-sm-push-3</div>
-        <div class="col-sm-4 col-sm-pull-8">col-sm-3 col-sm-pull-9</div>
-      </div>
+      
+      <h2>Thank you</h2>
+      
     </div>
   </body>
 </html>
