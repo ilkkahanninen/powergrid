@@ -104,11 +104,26 @@ a img {
   display: table;
   clear: both;
 }
-.row.equal {
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+@media screen and (min-width: 768px) {
+  .row.equal-sm {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .row.equal-md {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .row.equal-lg {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+  }
 }
 .col-xs-1,
 .col-xs-2,
@@ -163,54 +178,198 @@ a img {
   padding: 15px;
   content: foo;
 }
-.row.equal .col-xs-1,
-.row.equal .col-xs-2,
-.row.equal .col-xs-3,
-.row.equal .col-xs-4,
-.row.equal .col-xs-5,
-.row.equal .col-xs-6,
-.row.equal .col-xs-7,
-.row.equal .col-xs-8,
-.row.equal .col-xs-9,
-.row.equal .col-xs-10,
-.row.equal .col-xs-11,
-.row.equal .col-xs-12,
-.row.equal .col-sm-1,
-.row.equal .col-sm-2,
-.row.equal .col-sm-3,
-.row.equal .col-sm-4,
-.row.equal .col-sm-5,
-.row.equal .col-sm-6,
-.row.equal .col-sm-7,
-.row.equal .col-sm-8,
-.row.equal .col-sm-9,
-.row.equal .col-sm-10,
-.row.equal .col-sm-11,
-.row.equal .col-sm-12,
-.row.equal .col-md-1,
-.row.equal .col-md-2,
-.row.equal .col-md-3,
-.row.equal .col-md-4,
-.row.equal .col-md-5,
-.row.equal .col-md-6,
-.row.equal .col-md-7,
-.row.equal .col-md-8,
-.row.equal .col-md-9,
-.row.equal .col-md-10,
-.row.equal .col-md-11,
-.row.equal .col-md-12,
-.row.equal .col-lg-1,
-.row.equal .col-lg-2,
-.row.equal .col-lg-3,
-.row.equal .col-lg-4,
-.row.equal .col-lg-5,
-.row.equal .col-lg-6,
-.row.equal .col-lg-7,
-.row.equal .col-lg-8,
-.row.equal .col-lg-9,
-.row.equal .col-lg-10,
-.row.equal .col-lg-11,
-.row.equal .col-lg-12 {
+.equal-xs.row .col-xs-1,
+.equal-sm.row .col-xs-1,
+.equal-md.row .col-xs-1,
+.equal-lg.row .col-xs-1,
+.equal-xs.row .col-xs-2,
+.equal-sm.row .col-xs-2,
+.equal-md.row .col-xs-2,
+.equal-lg.row .col-xs-2,
+.equal-xs.row .col-xs-3,
+.equal-sm.row .col-xs-3,
+.equal-md.row .col-xs-3,
+.equal-lg.row .col-xs-3,
+.equal-xs.row .col-xs-4,
+.equal-sm.row .col-xs-4,
+.equal-md.row .col-xs-4,
+.equal-lg.row .col-xs-4,
+.equal-xs.row .col-xs-5,
+.equal-sm.row .col-xs-5,
+.equal-md.row .col-xs-5,
+.equal-lg.row .col-xs-5,
+.equal-xs.row .col-xs-6,
+.equal-sm.row .col-xs-6,
+.equal-md.row .col-xs-6,
+.equal-lg.row .col-xs-6,
+.equal-xs.row .col-xs-7,
+.equal-sm.row .col-xs-7,
+.equal-md.row .col-xs-7,
+.equal-lg.row .col-xs-7,
+.equal-xs.row .col-xs-8,
+.equal-sm.row .col-xs-8,
+.equal-md.row .col-xs-8,
+.equal-lg.row .col-xs-8,
+.equal-xs.row .col-xs-9,
+.equal-sm.row .col-xs-9,
+.equal-md.row .col-xs-9,
+.equal-lg.row .col-xs-9,
+.equal-xs.row .col-xs-10,
+.equal-sm.row .col-xs-10,
+.equal-md.row .col-xs-10,
+.equal-lg.row .col-xs-10,
+.equal-xs.row .col-xs-11,
+.equal-sm.row .col-xs-11,
+.equal-md.row .col-xs-11,
+.equal-lg.row .col-xs-11,
+.equal-xs.row .col-xs-12,
+.equal-sm.row .col-xs-12,
+.equal-md.row .col-xs-12,
+.equal-lg.row .col-xs-12,
+.equal-xs.row .col-sm-1,
+.equal-sm.row .col-sm-1,
+.equal-md.row .col-sm-1,
+.equal-lg.row .col-sm-1,
+.equal-xs.row .col-sm-2,
+.equal-sm.row .col-sm-2,
+.equal-md.row .col-sm-2,
+.equal-lg.row .col-sm-2,
+.equal-xs.row .col-sm-3,
+.equal-sm.row .col-sm-3,
+.equal-md.row .col-sm-3,
+.equal-lg.row .col-sm-3,
+.equal-xs.row .col-sm-4,
+.equal-sm.row .col-sm-4,
+.equal-md.row .col-sm-4,
+.equal-lg.row .col-sm-4,
+.equal-xs.row .col-sm-5,
+.equal-sm.row .col-sm-5,
+.equal-md.row .col-sm-5,
+.equal-lg.row .col-sm-5,
+.equal-xs.row .col-sm-6,
+.equal-sm.row .col-sm-6,
+.equal-md.row .col-sm-6,
+.equal-lg.row .col-sm-6,
+.equal-xs.row .col-sm-7,
+.equal-sm.row .col-sm-7,
+.equal-md.row .col-sm-7,
+.equal-lg.row .col-sm-7,
+.equal-xs.row .col-sm-8,
+.equal-sm.row .col-sm-8,
+.equal-md.row .col-sm-8,
+.equal-lg.row .col-sm-8,
+.equal-xs.row .col-sm-9,
+.equal-sm.row .col-sm-9,
+.equal-md.row .col-sm-9,
+.equal-lg.row .col-sm-9,
+.equal-xs.row .col-sm-10,
+.equal-sm.row .col-sm-10,
+.equal-md.row .col-sm-10,
+.equal-lg.row .col-sm-10,
+.equal-xs.row .col-sm-11,
+.equal-sm.row .col-sm-11,
+.equal-md.row .col-sm-11,
+.equal-lg.row .col-sm-11,
+.equal-xs.row .col-sm-12,
+.equal-sm.row .col-sm-12,
+.equal-md.row .col-sm-12,
+.equal-lg.row .col-sm-12,
+.equal-xs.row .col-md-1,
+.equal-sm.row .col-md-1,
+.equal-md.row .col-md-1,
+.equal-lg.row .col-md-1,
+.equal-xs.row .col-md-2,
+.equal-sm.row .col-md-2,
+.equal-md.row .col-md-2,
+.equal-lg.row .col-md-2,
+.equal-xs.row .col-md-3,
+.equal-sm.row .col-md-3,
+.equal-md.row .col-md-3,
+.equal-lg.row .col-md-3,
+.equal-xs.row .col-md-4,
+.equal-sm.row .col-md-4,
+.equal-md.row .col-md-4,
+.equal-lg.row .col-md-4,
+.equal-xs.row .col-md-5,
+.equal-sm.row .col-md-5,
+.equal-md.row .col-md-5,
+.equal-lg.row .col-md-5,
+.equal-xs.row .col-md-6,
+.equal-sm.row .col-md-6,
+.equal-md.row .col-md-6,
+.equal-lg.row .col-md-6,
+.equal-xs.row .col-md-7,
+.equal-sm.row .col-md-7,
+.equal-md.row .col-md-7,
+.equal-lg.row .col-md-7,
+.equal-xs.row .col-md-8,
+.equal-sm.row .col-md-8,
+.equal-md.row .col-md-8,
+.equal-lg.row .col-md-8,
+.equal-xs.row .col-md-9,
+.equal-sm.row .col-md-9,
+.equal-md.row .col-md-9,
+.equal-lg.row .col-md-9,
+.equal-xs.row .col-md-10,
+.equal-sm.row .col-md-10,
+.equal-md.row .col-md-10,
+.equal-lg.row .col-md-10,
+.equal-xs.row .col-md-11,
+.equal-sm.row .col-md-11,
+.equal-md.row .col-md-11,
+.equal-lg.row .col-md-11,
+.equal-xs.row .col-md-12,
+.equal-sm.row .col-md-12,
+.equal-md.row .col-md-12,
+.equal-lg.row .col-md-12,
+.equal-xs.row .col-lg-1,
+.equal-sm.row .col-lg-1,
+.equal-md.row .col-lg-1,
+.equal-lg.row .col-lg-1,
+.equal-xs.row .col-lg-2,
+.equal-sm.row .col-lg-2,
+.equal-md.row .col-lg-2,
+.equal-lg.row .col-lg-2,
+.equal-xs.row .col-lg-3,
+.equal-sm.row .col-lg-3,
+.equal-md.row .col-lg-3,
+.equal-lg.row .col-lg-3,
+.equal-xs.row .col-lg-4,
+.equal-sm.row .col-lg-4,
+.equal-md.row .col-lg-4,
+.equal-lg.row .col-lg-4,
+.equal-xs.row .col-lg-5,
+.equal-sm.row .col-lg-5,
+.equal-md.row .col-lg-5,
+.equal-lg.row .col-lg-5,
+.equal-xs.row .col-lg-6,
+.equal-sm.row .col-lg-6,
+.equal-md.row .col-lg-6,
+.equal-lg.row .col-lg-6,
+.equal-xs.row .col-lg-7,
+.equal-sm.row .col-lg-7,
+.equal-md.row .col-lg-7,
+.equal-lg.row .col-lg-7,
+.equal-xs.row .col-lg-8,
+.equal-sm.row .col-lg-8,
+.equal-md.row .col-lg-8,
+.equal-lg.row .col-lg-8,
+.equal-xs.row .col-lg-9,
+.equal-sm.row .col-lg-9,
+.equal-md.row .col-lg-9,
+.equal-lg.row .col-lg-9,
+.equal-xs.row .col-lg-10,
+.equal-sm.row .col-lg-10,
+.equal-md.row .col-lg-10,
+.equal-lg.row .col-lg-10,
+.equal-xs.row .col-lg-11,
+.equal-sm.row .col-lg-11,
+.equal-md.row .col-lg-11,
+.equal-lg.row .col-lg-11,
+.equal-xs.row .col-lg-12,
+.equal-sm.row .col-lg-12,
+.equal-md.row .col-lg-12,
+.equal-lg.row .col-lg-12 {
   padding-bottom: 9999px !important;
   margin-bottom: -9984px;
   display: flex;
@@ -377,8 +536,14 @@ a img {
 .no-gutter-xs {
   padding: 0 !important;
 }
-.row.equal .no-gutter,
-.row.equal .no-gutter-xs {
+.no-gutter .equal-xs,
+.no-gutter-xs .equal-xs,
+.no-gutter .equal-sm,
+.no-gutter-xs .equal-sm,
+.no-gutter .equal-md,
+.no-gutter-xs .equal-md,
+.equal-lg .no-gutter,
+.equal-lg .no-gutter-xs {
   padding-bottom: 9999px !important;
   margin-bottom: -9999px !important;
 }
@@ -544,7 +709,10 @@ a img {
   .no-gutter-sm {
     padding: 0 !important;
   }
-  .row.equal .no-gutter-sm {
+  .no-gutter-sm .equal-xs,
+  .no-gutter-sm .equal-sm,
+  .no-gutter-sm .equal-md,
+  .equal-lg .no-gutter-sm {
     padding-bottom: 9999px !important;
     margin-bottom: -9999px !important;
   }
@@ -711,7 +879,10 @@ a img {
   .no-gutter-md {
     padding: 0 !important;
   }
-  .row.equal .no-gutter-md {
+  .no-gutter-md .equal-xs,
+  .no-gutter-md .equal-sm,
+  .no-gutter-md .equal-md,
+  .equal-lg .no-gutter-md {
     padding-bottom: 9999px !important;
     margin-bottom: -9999px !important;
   }
@@ -878,7 +1049,10 @@ a img {
   .no-gutter-lg {
     padding: 0 !important;
   }
-  .row.equal .no-gutter-lg {
+  .no-gutter-lg .equal-xs,
+  .no-gutter-lg .equal-sm,
+  .no-gutter-lg .equal-md,
+  .equal-lg .no-gutter-lg {
     padding-bottom: 9999px !important;
     margin-bottom: -9999px !important;
   }

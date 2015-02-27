@@ -7,6 +7,7 @@ _height_hack = 9999px
 _precision = 3
 
 pg_col_list = null
+pg_equal_list = null
 for size, threshold in pg_thresholds
   for i in (1..pg_columns)
     _x = '.col-' + size + '-' + i
@@ -14,8 +15,14 @@ for size, threshold in pg_thresholds
       pg_col_list = _x
     else
       push(pg_col_list, _x)
+  _x = '.equal-' + size
+  if pg_equal_list == null
+    pg_equal_list = _x
+  else
+    push(pg_equal_list, _x)
 
 pg_col_class = join(',', pg_col_list)
+pg_equal_class = join(',', pg_equal_list)
 
 // +----------------------------------------------------+
 // | CONTAINERS                                         |
@@ -29,11 +36,13 @@ pg_col_class = join(',', pg_col_list)
 
 .row
   clearfix()
-  &.equal
-    overflow hidden
-    width 100%
-    display flex
-    flex-direction row
+  for size, threshold in pg_thresholds
+    if threshold > 0
+      &.equal-{size}
+        @media screen and (min-width: threshold)
+          overflow hidden
+          display flex
+          flex-direction row
 
 // +----------------------------------------------------+
 // | COLUMNS                                            |
@@ -56,9 +65,9 @@ create-columns(size)
 
 no-gutter()
   padding 0!important
-  .row.equal &
-      padding-bottom _height_hack!important
-      margin-bottom (-1 * _height_hack)!important
+  {pg_equal_class} &
+    padding-bottom _height_hack!important
+    margin-bottom (-1 * _height_hack)!important
 
 // Mobile first
 {pg_col_class}
@@ -69,11 +78,12 @@ no-gutter()
 
 // Equal height divs
 
-.row.equal
-  {pg_col_class}
-    padding-bottom _height_hack!important
-    margin-bottom (-1 * _height_hack + pg_gutter)
-    display flex
+{pg_equal_class}
+  &.row
+    {pg_col_class}
+      padding-bottom _height_hack!important
+      margin-bottom (-1 * _height_hack + pg_gutter)
+      display flex
 
 create-columns('xs')
 .no-gutter, .no-gutter-xs
