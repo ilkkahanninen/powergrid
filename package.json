@@ -1,6 +1,6 @@
 {
   "name": "powergrid",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Flexible and responsive CSS grid system based on Stylus",
   "main": "gulpfile.js",
   "scripts": {
