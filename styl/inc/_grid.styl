@@ -32,6 +32,8 @@ pg_col_class = join(',', pg_col_list)
   &.equal
     overflow hidden
     width 100%
+    display flex
+    flex-direction row
 
 // +----------------------------------------------------+
 // | COLUMNS                                            |
@@ -71,6 +73,7 @@ no-gutter()
   {pg_col_class}
     padding-bottom _height_hack!important
     margin-bottom (-1 * _height_hack + pg_gutter)
+    display flex
 
 create-columns('xs')
 .no-gutter, .no-gutter-xs

@@ -61,11 +61,3 @@ h2 {
   font-size: 200%;
   text-align: left!important;
 }
-
-.row.equal > div {
-  border: 1px solid #f0f0f0;
-  background: #f8f8f8;
-  border-radius: 5px;
-  text-align: center;
-  padding: 15px;
-}
