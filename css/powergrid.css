@@ -883,6 +883,83 @@ a img {
     margin-bottom: -9999px !important;
   }
 }
+.hidden {
+  display: none !important;
+}
+.visible {
+  display: block !important;
+}
+.visible-inline {
+  display: inline !important;
+}
+.visible-inline-block {
+  display: inline-block !important;
+}
+.visible-sm,
+.visible-sm-block,
+.visible-sm-inline-block,
+.visible-md,
+.visible-md-block,
+.visible-md-inline-block,
+.visible-lg,
+.visible-lg-block,
+.visible-lg-inline-block {
+  display: none !important;
+}
+.hidden-xs {
+  display: none !important;
+}
+.visible-xs {
+  display: block !important;
+}
+.visible-xs-inline {
+  display: inline !important;
+}
+.visible-xs-inline-block {
+  display: inline-block !important;
+}
+@media screen and (min-width: 768px) {
+  .hidden-sm {
+    display: none !important;
+  }
+  .visible-sm {
+    display: block !important;
+  }
+  .visible-sm-inline {
+    display: inline !important;
+  }
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hidden-md {
+    display: none !important;
+  }
+  .visible-md {
+    display: block !important;
+  }
+  .visible-md-inline {
+    display: inline !important;
+  }
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+  .visible-lg {
+    display: block !important;
+  }
+  .visible-lg-inline {
+    display: inline !important;
+  }
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
 html,
 body {
   height: 100%;

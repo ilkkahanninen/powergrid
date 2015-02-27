@@ -1,0 +1,31 @@
+pg_visible_list = null
+for size, threshold in pg_thresholds
+  if threshold > 0
+    _x = '.visible-' + size + ', .visible-' + size + '-block, ' + '.visible-' + size + '-inline-block'
+    if pg_visible_list == null
+      pg_visible_list = _x
+    else
+      push(pg_visible_list, _x)
+pg_visible_class = join(',', pg_visible_list)
+
+create-visibility-classes(postfix)
+  .hidden{postfix}
+    display none!important
+  .visible{postfix}
+    display block!important
+  .visible{postfix}-inline
+    display inline!important
+  .visible{postfix}-inline-block
+    display inline-block!important
+
+create-visibility-classes('')
+{pg_visible_class}
+  display none!important
+
+for size, threshold in pg_thresholds  
+  if threshold > 0
+    @media screen and (min-width: threshold)
+      create-visibility-classes('-' + size)
+  else
+    create-visibility-classes('-' + size)
+  
