@@ -1,0 +1,25 @@
+.navbar
+  clearfix()
+  a
+    text-decoration none
+    &:hover
+      text-decoration underline
+  .brand
+    float left
+    display block
+    padding pg_gutter
+  ul.navigation
+    float right
+    list-style none
+    li
+      display inline-block
+      a
+        display inline-block
+        padding pg_gutter
+
+  &.fixed
+    position fixed
+    top 0
+    left 0
+    right 0
+    z-index 10

@@ -4,8 +4,7 @@ body {
 }
 
 .row .content {
-  border: 1px solid #f0f0f0;
-  background: #f8f8f8;
+  background: #f0f0f0;
   border-radius: 5px;
   text-align: center;
   padding: 15px;
@@ -57,7 +56,30 @@ h2 {
   font-weight: 900;
 }
 
-.important {
-  font-size: 200%;
-  text-align: left!important;
+.navbar {
+  background: rgba(255,255,255,0.95);
+  box-shadow: rgba(0,0,0,0.3) 0 0 5px;
+}
+.navbar a {
+  color: #666;
+}
+.navbar .brand {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ruler {
+  border-right: 1px solid #aaa;
+}
+.ruler.bottom {
+  border-bottom: 1px solid #aaa;
+}
+.ruler.top {
+  border-top: 1px solid #aaa;
+}
+.ruler > * {
+  height: 5px;
+  border-left: 1px solid #aaa;
+  padding: 0;
 }

@@ -1,3 +1,8 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 html,
 body,
 div,
@@ -176,7 +181,6 @@ a img {
   position: relative;
   box-sizing: border-box;
   padding: 15px;
-  content: foo;
 }
 .equal-xs.row > *,
 .equal-sm.row > *,
@@ -967,4 +971,38 @@ body {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+}
+.navbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+.navbar .brand {
+  float: left;
+  display: block;
+  padding: 15px;
+}
+.navbar ul.navigation {
+  float: right;
+  list-style: none;
+}
+.navbar ul.navigation li {
+  display: inline-block;
+}
+.navbar ul.navigation li a {
+  display: inline-block;
+  padding: 15px;
+}
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
