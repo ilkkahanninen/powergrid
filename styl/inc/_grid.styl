@@ -79,11 +79,10 @@ no-gutter()
 // Equal height divs
 
 {pg_equal_class}
-  &.row
-    {pg_col_class}
-      padding-bottom _height_hack!important
-      margin-bottom (-1 * _height_hack + pg_gutter)
-      display flex
+  &.row > *
+    padding-bottom _height_hack!important
+    margin-bottom (-1 * _height_hack + pg_gutter)
+    display flex
 
 create-columns('xs')
 .no-gutter, .no-gutter-xs
