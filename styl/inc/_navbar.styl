@@ -23,3 +23,36 @@
     left 0
     right 0
     z-index 10
+
+  // Button
+  #hide-nav
+    display none
+    float right
+    padding pg_gutter
+
+  create-nav-button(postfix)
+    #show-nav{postfix}
+      display block
+      float right
+      padding pg_gutter
+      & ~ .navigation
+        display none
+        clear both
+        float none
+        li
+          display block
+      &:target
+        display none
+        & + #hide-nav
+          display block
+        & ~ .navigation
+          display block
+
+  create-nav-button('')
+  for size, threshold in pg_thresholds    
+    if threshold > 0
+      @media screen and (max-width: threshold - 1px)
+        create-nav-button('-' + size)
+      @media screen and (min-width: threshold)
+        #show-nav-{size}
+          display none

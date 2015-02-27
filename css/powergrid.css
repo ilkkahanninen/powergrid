@@ -1006,3 +1006,117 @@ body {
   right: 0;
   z-index: 10;
 }
+.navbar #hide-nav {
+  display: none;
+  float: right;
+  padding: 15px;
+}
+.navbar #show-nav {
+  display: block;
+  float: right;
+  padding: 15px;
+}
+.navbar #show-nav ~ .navigation {
+  display: none;
+  clear: both;
+  float: none;
+}
+.navbar #show-nav ~ .navigation li {
+  display: block;
+}
+.navbar #show-nav:target {
+  display: none;
+}
+.navbar #show-nav:target + #hide-nav {
+  display: block;
+}
+.navbar #show-nav:target ~ .navigation {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .navbar #show-nav-sm {
+    display: block;
+    float: right;
+    padding: 15px;
+  }
+  .navbar #show-nav-sm ~ .navigation {
+    display: none;
+    clear: both;
+    float: none;
+  }
+  .navbar #show-nav-sm ~ .navigation li {
+    display: block;
+  }
+  .navbar #show-nav-sm:target {
+    display: none;
+  }
+  .navbar #show-nav-sm:target + #hide-nav {
+    display: block;
+  }
+  .navbar #show-nav-sm:target ~ .navigation {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar #show-nav-sm {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar #show-nav-md {
+    display: block;
+    float: right;
+    padding: 15px;
+  }
+  .navbar #show-nav-md ~ .navigation {
+    display: none;
+    clear: both;
+    float: none;
+  }
+  .navbar #show-nav-md ~ .navigation li {
+    display: block;
+  }
+  .navbar #show-nav-md:target {
+    display: none;
+  }
+  .navbar #show-nav-md:target + #hide-nav {
+    display: block;
+  }
+  .navbar #show-nav-md:target ~ .navigation {
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar #show-nav-md {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .navbar #show-nav-lg {
+    display: block;
+    float: right;
+    padding: 15px;
+  }
+  .navbar #show-nav-lg ~ .navigation {
+    display: none;
+    clear: both;
+    float: none;
+  }
+  .navbar #show-nav-lg ~ .navigation li {
+    display: block;
+  }
+  .navbar #show-nav-lg:target {
+    display: none;
+  }
+  .navbar #show-nav-lg:target + #hide-nav {
+    display: block;
+  }
+  .navbar #show-nav-lg:target ~ .navigation {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navbar #show-nav-lg {
+    display: none;
+  }
+}
